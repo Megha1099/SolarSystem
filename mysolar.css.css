@@ -1,0 +1,113 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.galaxy{
+    border: 2px solid black;
+    height:100vh ;
+    width: 100vw;
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/21/12/39/stars-1845140_1280.jpg");
+}
+.orbit{
+    height: 400px;
+    width: 400px;
+    border: 2px solid white transparent;
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    position: relative;
+    border-radius: 50%;
+    animation-name: erotate;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    perspective: 800px;
+    perspective-origin: 50% 50%;
+   
+}
+
+.sun{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-size:contain;
+    box-shadow:0 0 3em rgb(235, 97, 97);
+  
+    background-image: url("https://images.unsplash.com/photo-1614642264762-d0a3b8bf3700?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    animation-name: sro;
+    animation-duration: 100s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: absolute;
+    top: 35vh;
+    left: 45vw;
+}
+@keyframes sro {
+    from{
+        transform: rotate(0deg);
+        
+    }
+    to{
+        transform: rotate(360deg);  
+    }
+    
+}
+.earth{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    box-shadow:0 0 3em rgb(30, 30, 196) ;
+    background-size: cover;
+    background-image: url("https://cdn.pixabay.com/photo/2011/12/13/14/31/earth-11015_1280.jpg");
+    animation-name: erotate;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-style: preserve-3d;
+}
+.eorbit{
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+   /* border: 3px solid white;*/
+    position: relative;
+    animation-name: erotate;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+.moon{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+   /* border: 3px solid white;*/
+    box-shadow:0 0 3em rgb(162, 162, 179) ;
+    background-size: contain;
+    animation-name: erotate;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    background-image: url("./Screenshot\ 2024-01-07\ 013149.png");
+
+}
+@keyframes erotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
